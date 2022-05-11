@@ -1,5 +1,11 @@
-#!/bin/sh
+# git notes
 
+## git reset
+git reset --hard COMMIT-ID
+git push  --force
+
+
+## git update
 yum install zlib-devel
 
 wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.36.0.tar.xz
@@ -10,3 +16,8 @@ cd git-2.36.0
 
 make
 make install
+
+## git ssh key
+
+cd ~/.ssh
+ssh-keygen -t rsa -C "email-or-some-id"
