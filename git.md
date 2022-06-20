@@ -21,3 +21,10 @@ make install
 
 cd ~/.ssh
 ssh-keygen -t rsa -C "email-or-some-id"
+
+
+## config
+
+git config  user.email pengjianzhang@gmail.com
+git config  user.name "Jianzhang Peng"
+
