@@ -20,13 +20,15 @@ download
 PWD=`pwd`
 ECHO_PATH=$PWD/echo-nginx-module-master
 NGINX_CONF=$PWD/../nginx.conf
+SSL_CONF=$PWD/../ssl.*
 
 
 cd nginx-1.20.2/
-./configure --add-module=$ECHO_PATH
+./configure --with-http_ssl_module --add-module=$ECHO_PATH
 make -j8
 make install
 echo cp -f $NGINX_CONF /usr/local/nginx/conf/
 cp -f $NGINX_CONF /usr/local/nginx/conf/
+cp -f $SSL_CONF /usr/local/nginx/conf/
 
 
