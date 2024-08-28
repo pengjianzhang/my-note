@@ -24,7 +24,7 @@ SSL_CONF=$PWD/../ssl.*
 
 
 cd nginx-1.20.2/
-./configure --with-http_ssl_module --add-module=$ECHO_PATH
+./configure --with-http_ssl_module --add-module=$ECHO_PATH --with-stream
 make -j8
 make install
 echo cp -f $NGINX_CONF /usr/local/nginx/conf/
